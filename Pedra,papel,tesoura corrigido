@@ -1,0 +1,35 @@
+import random
+
+print("ola, bem vindo ao mini game da juju ")
+opcoes = ["Pedra", "Papel", "Tesoura"]
+
+while True:
+    escolhausuario = input("escolha: pedra, papel, tesoura ou sair ").capitalize()
+    
+    if escolhausuario.lower() == "sair":
+        print("obrigado por sua visita")
+        break
+    
+    escolhaComputador = random.choice(opcoes)
+    print(escolhaComputador)
+
+    if escolhausuario == escolhaComputador:
+        print("empatou ")
+
+    elif escolhausuario == "Pedra" and escolhaComputador == "Tesoura":
+        print("voce ganhou ")
+
+    elif escolhausuario == "Pedra" and escolhaComputador == "Papel":
+        print("O computador venceu ")
+
+    elif escolhausuario == "Tesoura" and escolhaComputador == "Pedra":
+        print("o computador ganhou ")
+
+    elif escolhausuario == "Tesoura" and escolhaComputador == "Papel":
+        print("voce venceu ")
+
+    elif escolhausuario == "Papel" and escolhaComputador == "Pedra":
+        print("voce ganhou ")
+
+    elif escolhausuario == "Papel" and escolhaComputador == "Tesoura":
+        print("O computador venceu ")
